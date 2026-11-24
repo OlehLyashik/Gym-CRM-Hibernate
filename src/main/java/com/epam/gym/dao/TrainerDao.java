@@ -1,0 +1,14 @@
+package com.epam.gym.dao;
+
+import com.epam.gym.entity.Trainer;
+import java.util.List;
+import java.util.Optional;
+import java.util.Set;
+
+public interface TrainerDao {
+    Trainer save(Trainer trainer);
+    Trainer update(Trainer trainer);
+    Optional<Trainer> findByUsername(String username);
+    List<Trainer> findNotAssignedToTrainee(String traineeUsername);
+    List<Trainer> findByUsernames(Set<String> usernames);
+}
